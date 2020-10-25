@@ -43,3 +43,30 @@
 #     final_int = int(''.join([str(j) for j in final_list])) #make string out of final list and convert to int type
     
 #     return final_int
+
+# Friday 13th or Black Friday is considered as unlucky day. 
+# Calculate how many unlucky days are in the given year.
+# Find the number of Friday 13th in the given year.
+# input: integer
+# output: integer
+import datetime
+def unlucky_days(year):
+    #initialize count of friday 13ths
+    fridays = 0
+    
+    #set start of the year
+    first = datetime.date(year, 1, 1)
+    
+    #set end date
+    last = datetime.date(year, 12, 31)
+    
+    #set time to be changed by
+    delta = datetime.timedelta(days = 1)
+    
+    while first <= last:
+        if first.weekday() == 4 and first.day ==13:
+            fridays += 1
+        first += delta
+    
+    
+    return fridays
