@@ -20,3 +20,14 @@ FROM cycling
 -- you will be given a table 'kata' with columns 'n', 'x', and 'y'. Return the 'id' and your result in a column named 'res'.
 select id, (n % x = 0 and n % y = 0) as res 
 from kata
+
+-- Given the following table 'decimals':
+
+-- ** decimals table schema **
+
+-- id
+-- number1
+-- number2
+-- Return a table with one column (result) which is the output of number1 raised to the power of number2.
+select (number1 ^ number2) as result 
+from decimals
